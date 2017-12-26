@@ -33,9 +33,7 @@ class Node(object):
         returnString += "p=\"" + x + " " + y + "\"\n"
         if nodeType:
             returnString += "NodeType=\"1\"\n"
-            returnString += "E
-""" Need to put the element number of the heavy atom in the label, maybe using somethign like:
-re.sub(r"H\:.+?\, ", "", str(pt.formula("H2HfH3").hill.atoms)).split("{",1)[-1].split(":",1)[0]
-"""
+            returnString += "Element=\"" + pt.elements.symbol(re.sub(r"H\:.+?\, ", "", str(pt.formula(text).hill.atoms)).split("{",1)[-1].split(":",1)[0]).number + "\"\n"
+            returnString += "NumHydrogens=\"' + 
         returnString += "\/n>"
         return returnString
