@@ -17,7 +17,7 @@ class Node(object):
         text: A Text object that stores the label of this Node.
     """
 
-    def __init__(self, id, x, y, nodeType, implicit, text)
+    def __init__(self, id, x, y, nodeType, implicit, text):
         """Return a Node object with the given attributes."""
         self.id = id
         self.x = x
@@ -26,14 +26,14 @@ class Node(object):
         self.implicit = implicit
         self.text = text
 
-    def __str__(self)
+    def __str__(self):
         """Returns the cdxml string representation of this Node"""
         returnString = "<n\n"
-        returnString += "id=\"" + id + "\"\n"
-        returnString += "p=\"" + x + " " + y + "\"\n"
+        returnString += "id=\"" + self.id + "\"\n"
+        returnString += "p=\"" + self.x + " " + self.y + "\"\n"
         if nodeType:
             returnString += "NodeType=\"1\"\n"
-            returnString += "E
+            returnString += "E"
 """ Need to put the element number of the heavy atom in the label, maybe using somethign like:
 re.sub(r"H\:.+?\, ", "", str(pt.formula("H2HfH3").hill.atoms)).split("{",1)[-1].split(":",1)[0]
 """
