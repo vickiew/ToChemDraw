@@ -29,11 +29,11 @@ class Node(object):
     def __str__(self):
         """Returns the cdxml string representation of this Node"""
         returnString = "<n\n"
-        returnString += "id=\"" + self.id + "\"\n"
-        returnString += "p=\"" + self.x + " " + self.y + "\"\n"
+        returnString += "id=\"" + str(self.id) + "\"\n"
+        returnString += "p=\"" + str(self.x) + " " + str(self.y) + "\"\n"
         if nodeType:
             returnString += "NodeType=\"1\"\n"
             returnString += "Element=\"" + pt.elements.symbol(re.sub(r"H\:.+?\, ", "", str(pt.formula(text).hill.atoms)).split("{",1)[-1].split(":",1)[0]).number + "\"\n"
             returnString += "NumHydrogens=\"' + "
-        returnString += "\/n>"
+        returnString += "/>"
         return returnString

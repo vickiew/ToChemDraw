@@ -12,12 +12,12 @@ class Bond(object):
     def __str__(self):
         """Returns the cdxml string representation of this Node."""
         returnString = "<b\n"
-        returnString += "id=\"" + id + "\"\n"
-        returnString += "B=\"" + self.begin + "\"\n"
-        returnString += "E=\"" + self.end + "\"\n"
-        returnString += "Order=\"" + self.order + "\"\n"
-        returnString += "Z=\"" + self.zorder + "\"\n"
-        returnString += "Display=\"" + self.stereo + "\"\n"
-        returnString += "\/n>"
+        returnString += "id=\"" + str(id) + "\"\n"
+        returnString += "B=\"" + str(self.begin) + "\"\n"
+        returnString += "E=\"" + str(self.end) + "\"\n"
+        returnString += "Order=\"" + str(self.order) + "\"\n"
+        returnString += "Z=\"" + str(self.zorder) + "\"\n"
+        returnString += "Display=\"" + str(self.stereo) + "\"\n"
+        returnString += "/>"
         return returnString
 
