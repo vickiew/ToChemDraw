@@ -1,6 +1,12 @@
 Task List
 
 Fragment
+    The purpose of Fragment is to serve as a container for the other objects in this cdxml document.
+    We would like to be able to:
+        -add a Node, Bond, Arrow
+        -keep the id numbers of these objects distinct and consistent
+        -probably we want to be able to remove objects too, but this is not strictly necessary right now
+        -obtain the cdxml string of a Fragment
 Text
 Arrow
 Image
